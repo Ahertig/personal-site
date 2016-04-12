@@ -8,17 +8,15 @@ body {
   padding-top: 60px;
   margin: 0 auto; }
 
-fullstack-logo {
+logo {
   display: block; }
-  fullstack-logo img {
+  logo img {
     display: block;
-    width: 100%; }
+    width: 50px; }
 
 navbar {
   display: block;
-  background: white;
-  border-bottom: 1px solid black;
-  box-shadow: 1px 1px 14px -3px black; }
+  background: transparent; }
   navbar .container {
     width: 91%;
     max-width: 1340px;
@@ -34,10 +32,10 @@ navbar {
     cursor: pointer;
     transition: color 0.2s; }
     navbar .nav > li > a.active {
-      color: #c80a0c; }
+      color: #2c94c5; }
     navbar .nav > li > a:hover {
       background: none;
-      color: #f31214; }
+      color: gray; }
     navbar .nav > li > a:focus {
       background: none; }
   navbar .login-button {

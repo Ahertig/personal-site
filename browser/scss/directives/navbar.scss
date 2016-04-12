@@ -1,9 +1,7 @@
 navbar {
 
   display: block;
-  background: white;
-  border-bottom: 1px solid black;
-  box-shadow: 1px 1px 14px -3px black;
+  background: transparent;
 
   .container {
     width: 91%;
@@ -26,11 +24,11 @@ navbar {
     cursor: pointer;
     transition: color 0.2s;
     &.active {
-      color: darken(#f31214, 10%);
+      color: darken(#4dabd7, 10%);
     }
     &:hover {
       background: none;
-      color: #f31214;
+      color: gray;
     }
     &:focus {
       background: none;
