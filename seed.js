@@ -22,22 +22,28 @@ var Promise = require('bluebird');
 var chalk = require('chalk');
 var connectToDb = require('./server/db');
 var User = Promise.promisifyAll(mongoose.model('User'));
+var Post = Promise.promisifyAll(mongoose.model('Post'));
+
+var users = [
+    {
+        email: 'alyssa@gmail.com',
+        password: 'password'
+    }
+];
+
+var posts = [
+    {
+        title: 'Here is a blog title',
+        body: 'Blogs are splendiferous things'
+    }
+];
 
 var seedUsers = function () {
-
-    var users = [
-        {
-            email: 'testing@fsa.com',
-            password: 'password'
-        },
-        {
-            email: 'obama@gmail.com',
-            password: 'potus'
-        }
-    ];
-
     return User.createAsync(users);
+};
 
+var seedPosts = function () {
+    return Post.createAsync(posts);
 };
 
 connectToDb.then(function () {
@@ -48,11 +54,22 @@ connectToDb.then(function () {
             console.log(chalk.magenta('Seems to already be user data, exiting!'));
             process.kill(0);
         }
-    }).then(function () {
+    })
+    .then(function(users) {
+        posts[0].author = users[0]._id;
+        return seedPosts();
+    })
+    .then(function () {
         console.log(chalk.green('Seed successful!'));
         process.kill(0);
-    }).catch(function (err) {
+    })
+    .catch(function (err) {
         console.error(err);
         process.kill(1);
     });
 });
+
+
+
+
+

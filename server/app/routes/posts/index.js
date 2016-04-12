@@ -9,7 +9,7 @@ var Post = mongoose.model('Post')
 router.get('/', function(req, res) {
   Post.find()
   .then(function(posts) {
-    res.send(posts);
+    res.json(posts);
   })
 });
 
@@ -17,6 +17,6 @@ router.get('/', function(req, res) {
 router.get('/:id', function(req, res) {
   Post.findById(req.params.id)
   .then(function(post) {
-    res.send(post);
+    res.json(post);
   })
 });
