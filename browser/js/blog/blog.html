@@ -1,5 +1,6 @@
 <section id="blog">
-    <p>
-        Alyssa <3s tech stuff.
-    </p>
+    <div class="post" ng-repeat="post in posts">
+      <h1>{{post.title}}</h1>
+      <p>{{post.body}}</p>
+    </div>
 </section>
