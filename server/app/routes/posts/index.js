@@ -20,3 +20,19 @@ router.get('/:id', function(req, res) {
     res.json(post);
   })
 });
+
+// Get posts with this tag
+router.get('/tags/:tag', function(req, res) {
+  Post.retrievePostsByTag(req.params.tag)
+  .then(function(posts) {
+    console.log('here are the resulting posts: ', posts);
+    res.json(posts);
+  })
+})
+
+
+
+
+
+
+
