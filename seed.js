@@ -34,7 +34,18 @@ var users = [
 var posts = [
     {
         title: 'Here is a blog title',
-        body: 'Blogs are splendiferous things'
+        body: 'Blogs are splendiferous things',
+        tags: 'blog'
+    },
+    {
+        title: 'Here is a blog title',
+        body: 'Blogs are weird things',
+        tags: 'blog'
+    },
+    {
+        title: 'Here is a blog title',
+        body: 'Blogs are morbid things',
+        tags: 'notBlog'
     }
 ];
 
@@ -57,6 +68,8 @@ connectToDb.then(function () {
     })
     .then(function(users) {
         posts[0].author = users[0]._id;
+        posts[1].author = users[0]._id;
+        posts[2].author = users[0]._id;
         return seedPosts();
     })
     .then(function () {

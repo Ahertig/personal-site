@@ -2,7 +2,7 @@
 var mongoose = require('mongoose');
 var _ = require('lodash');
 
-var schema = new mongoose.Schema({
+var postSchema = new mongoose.Schema({
     title: {
         type: String
     },
@@ -23,4 +23,14 @@ var schema = new mongoose.Schema({
     }
 });
 
-mongoose.model('Post', schema);
+postSchema.statics.retrievePostsByTag = function(tag) {
+    return this.find({
+        tags: { $in: [tag] }
+    })
+    .then(function(posts) {
+        return posts;
+    })
+}
+
+mongoose.model('Post', postSchema);
+
