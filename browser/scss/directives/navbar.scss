@@ -1,9 +1,5 @@
 navbar {
 
-  .container {
-    text-align: center;
-  }
-
   .navbar .navbar-nav {
     display: inline-block;
     float: none;
@@ -20,20 +16,22 @@ navbar {
   background: transparent;
 
   .container {
+    text-align: center;
     width: 91%;
     max-width: 1340px;
     padding-top: 20px;
   }
 
   logo {
-    margin-top: 5px;
+    padding-top: -30px;
     margin-right: 20px;
     width: 40px;
   }
 
   a {
     color: black;
-    font-size: 16px;
+    font-family: "Baskerville";
+    font-size: 18px;
   }
 
   .nav > li > a {
@@ -41,6 +39,26 @@ navbar {
     transition: color 0.2s;
     &.active {
       color: darken(#4dabd7, 10%);
+    }
+    &:before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background-color: #C0C0C0;
+      visibility: hidden;
+      -webkit-transform: scaleX(0);
+      transform: scaleX(0);
+      -webkit-transition: all 0.8s ease-in-out 0s;
+      transition: all 0.8s ease-in-out 0s;
+    }
+    &:hover:before {
+      background-color: none;
+      visibility: visible;
+      -webkit-transform: scaleX(1);
+      transform: scaleX(1);
     }
     &:hover {
       background: none;
