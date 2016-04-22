@@ -1,5 +1,21 @@
 navbar {
 
+  .container {
+    text-align: center;
+  }
+
+  .navbar .navbar-nav {
+    display: inline-block;
+    float: none;
+    text-align: center;
+  }
+
+  .navbar .navbar-header {
+    text-align: center;
+    float: none;
+    display: inline-block;
+  }
+
   display: block;
   background: transparent;
 
