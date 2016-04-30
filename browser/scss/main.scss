@@ -36,11 +36,8 @@ h2 {
 
 .square {
   padding: 10px;
-  border-bottom: 1px solid #00eeff;
-  border-top: 1px solid #00eeff;
-  border-left: 1px solid #11aabb;
-  border-right: 1px solid #11aabb;
-  border-opacity: 0.5;
+  border: 1px solid #00eeff;
+  display: inline-block;
 }
 
 @import 'directives/main';
