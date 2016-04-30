@@ -7,7 +7,7 @@
  */
 
 module.exports = {
-    "DATABASE_URI": process.env.MONGOLAB_URI,
+    "DATABASE_URI": "mongodb://heroku_vf3ncj9j:i2m8sbi3ue5tl00jc9su3lk16s@ds027345.mlab.com:27345/heroku_vf3ncj9j",
     "SESSION_SECRET": process.env.SESSION_SECRET,
     "TWITTER": {
         "consumerKey": process.env.TWITTER_CONSUMER_KEY,
