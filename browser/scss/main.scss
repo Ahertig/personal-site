@@ -3,9 +3,22 @@
 }
 
 body {
-  background: #fdfdfd;
-  font-family: "Times New Roman";
+  background-image: url("https://i.imgsafe.org/fa00f24.png");
+  font-family: "Roboto";
   font-size: 18px;
+}
+
+a {
+  color: #0011ee;
+
+  &:hover {
+    color: #3344bb;
+  }
+}
+
+h2 {
+  font-family: 'Inconsolata', serif;
+  padding-bottom: 20px;
 }
 
 @mixin clearfix {
@@ -19,6 +32,15 @@ body {
 #main {
   padding-top: 30px;
   margin: 0 auto;
+}
+
+.square {
+  padding: 10px;
+  border-bottom: 1px solid #00eeff;
+  border-top: 1px solid #00eeff;
+  border-left: 1px solid #11aabb;
+  border-right: 1px solid #11aabb;
+  border-opacity: 0.5;
 }
 
 @import 'directives/main';

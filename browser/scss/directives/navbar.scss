@@ -1,10 +1,5 @@
 navbar {
 
-  .navbar {
-    background-image: url("https://i.imgsafe.org/fa00f24.png");
-    border-bottom: 3px solid #e8e8e8;
-  }
-
   .navbar .navbar-nav {
     display: inline-block;
     float: none;
@@ -35,7 +30,8 @@ navbar {
 
   a {
     color: black;
-    font-family: "Baskerville";
+    font-weight: 700;
+    font-family: "Roboto";
     font-size: 18px;
   }
 
@@ -43,7 +39,7 @@ navbar {
     cursor: pointer;
     transition: color 0.2s;
     &.active {
-      color: darken(#4dabd7, 10%);
+      color: gray;
     }
     &:before {
       content: "";
@@ -67,7 +63,7 @@ navbar {
     }
     &:hover {
       background: none;
-      color: gray;
+      color: #0011ee;
     }
     &:focus {
       background: none;
